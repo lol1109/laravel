@@ -13,6 +13,8 @@ use App\Repositories\Api\SubDistrictsRepository;
 use App\Repositories\Api\SubDistrictsRepositoryImplement;
 use App\Repositories\Api\UrbansRepository;
 use App\Repositories\Api\UrbansRepositoryImplement;
+use App\Repositories\Visit\VisitRepository;
+use App\Repositories\Visit\VisitRepositoryImplement;
 use App\Services\Branch\BranchServiceImplements;
 use Illuminate\Support\ServiceProvider;
 
@@ -28,6 +30,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(DistrictsRepository::class, DistrictsRepositoryImplement::class);
         $this->app->bind(SubDistrictsRepository::class, SubDistrictsRepositoryImplement::class);
         $this->app->bind(UrbansRepository::class, UrbansRepositoryImplement::class);
+        $this->app->bind(VisitRepository::class, VisitRepositoryImplement::class);
     }
 
     /**
