@@ -18,6 +18,10 @@ use App\Http\Controllers\HomeController;
 */
 Auth::routes();
 
+Route::get('/',function(){
+    return 'Visitor Elang Prooperty Indonesia';
+});
+
 Route::get('/home', [App\Http\Controllers\VisitController::class, 'index'])->name('visits.index');
 
 Route::get('/cek', [VisitController::class, 'visitor'])->name('visitor');
